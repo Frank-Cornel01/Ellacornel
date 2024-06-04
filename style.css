@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --margin: .5rem 2rem;
+    --margin-2: .5rem 1rem;
+    --blue: #024a51;
+    --orange: #f5a105;
+    --light-blue: #bfc2c2;
+}
+
+h2{
+    font-size: 32px;
+    font-family: "Roboto Serif", serif;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--margin);
+}
+
+.logo{
+    width: 145px;
+}
+
+@media (max-width: 520px){
+    .header-container{
+        gap: 2rem;
+        margin: var(--margin-2);
+    }
+    h2{
+        font-size: 12px;
+    }
+
+    .logo{
+        width: 95px;
+    }
+
+}
+.courses{
+    display: flex;
+    justify-content: space-between;
+    margin: var(--margin);
+    gap: 2rem;
+}
+.course-2, .course-1{
+    width: 50%;
+    padding: .5rem 1rem;
+    border-radius: 8px;
+}
+@media (max-width: 520px){
+    .courses{
+        flex-wrap: wrap;
+        margin: var(--margin-2);
+        gap: .5rem;
+    }
+    .course-2, .course-1{
+        width: 100%;
+    }
+}
+.course-2{
+    background: var(--orange);
+}
+.course-1{
+    background: var(--blue);
+    color: var(--light-blue);
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+ul li{
+    list-style: none;
+}
+
+/* Overview */
+.overview{
+    margin: var(--margin);
+    text-align: center;
+    background: var(--orange);
+    margin-top: 2rem;
+    border-radius: 8px;
+    padding: 0 4rem;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 520px){
+    .overview{
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+        margin: var(--margin-2);
+    }
+}
+
+.overview h2{
+    padding: 1rem 0;
+}
+
+.curriculum-container{
+    margin: var(--margin);
+}
+.curriculums{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: var(--orange);
+    border-radius: 8px;
+    padding: 2rem;
+    gap: 4rem;
+}
+.curriculum h3{
+    background: var(--blue);
+    padding: .5rem;
+    display: flex;
+    color: var(--light-blue);
+    font-family: "LXGW WenKai TC", cursive;
+}
+@media (max-width: 520px){
+    .curriculum-container{
+        margin: var(--margin-2);
+    }
+    .curriculums{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.curriculum ul{
+    margin-left: .3rem;
+}
+.curriculum ul li:first-child{
+    font-weight: bold;
+    font-size: 18px;
+    list-style: none;
+    margin-left: 0;
+}
+
+.curriculum ul li{
+    list-style: disc;
+    margin-left: 1rem;
+}
